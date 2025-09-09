@@ -72,7 +72,7 @@ class UserDetailsController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:user_details,email,' . $userDetails->id,
+            'email' => 'required|email|unique:user-details,email,' . $userDetails->id,
             'phone' => 'nullable|string|max:15',
         ]);
 
